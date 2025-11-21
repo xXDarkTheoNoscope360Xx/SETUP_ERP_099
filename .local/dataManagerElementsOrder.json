@@ -1,0 +1,150 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "config&Flowchart_1",
+        "processName&Flowchart_1",
+        "sequenceName&Sequence_1",
+        "vListeQueueItems&Sequence_1",
+        "sequenceName&Sequence_3",
+        "sequenceName&Sequence_7",
+        "sequenceName&Sequence_8"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_Dispatcher",
+        "In_Performer",
+        "In_Reporting"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Dispatcher_/Dispatcher_AddToQueue.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "filename&Sequence_3",
+        "localSetupPath&Sequence_3",
+        "SetupHorizonPath&Sequence_1",
+        "horizonDT&Sequence_1",
+        "specificSetupPath&Sequence_1",
+        "setupDT&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Performer_/Performer_Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "status&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_TransactionItem",
+        "In_Config",
+        "IO_ReportingData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Performer_/Performer_UploadFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "extractDt&Sequence_5",
+        "dt&Sequence_5",
+        "fileBytes&Sequence_5",
+        "xmlResponse&Sequence_5",
+        "fileContent&Sequence_5",
+        "status&Sequence_5",
+        "response&Sequence_5",
+        "pj&Sequence_5",
+        "headers&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_Config",
+        "In_TransactionItem",
+        "Out_Status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utils/Utils_UploadByOracleApiRequest.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bytes&Sequence_11",
+        "b64File&Sequence_11",
+        "headers&Sequence_11",
+        "pj&Sequence_11",
+        "pId&Sequence_12",
+        "jsonResponse&Sequence_12",
+        "uploadResponse&Sequence_12",
+        "uploadStatus&Sequence_12",
+        "count&Sequence_12"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_Config",
+        "Out_Status",
+        "Out_Response"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utils/Utils_DownloadSharePointFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "getFile&Sequence_8",
+        "outFile&Sequence_8"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_FileName",
+        "In_Config",
+        "In_FilePath",
+        "Out_FileLocalPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/PurgeLogs.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "processName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utils/Utils_UploadSharePointFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "outFile&Sequence_13",
+        "folderDriveItem&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_Config",
+        "In_FilePath",
+        "In_SharePointFolderPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

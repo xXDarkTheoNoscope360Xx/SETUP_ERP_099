@@ -1,0 +1,118 @@
+<Activity mc:Ignorable="sads sap sap2010" x:Class="ELK_ItemEnd" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_ProcessID" Type="InArgument(x:String)" />
+    <x:Property Name="In_Department" Type="InArgument(x:String)" />
+    <x:Property Name="in_Businessunit" Type="InArgument(x:String)" />
+    <x:Property Name="in_Team" Type="InArgument(x:String)" />
+    <x:Property Name="In_HumanTime" Type="InArgument(x:Int32)" />
+    <x:Property Name="In_ItemStatus" Type="InArgument(x:String)" />
+    <x:Property Name="In_ItemProcessed" Type="InArgument(x:String)" />
+    <x:Property Name="In_StartTime" Type="InArgument(s:DateTime)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>ELK_ItemEnd_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="314,22" Id="AddLogFields_3" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="314,91" Id="LogMessage_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="314,22" Id="RemoveLogFields_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="336,651" Id="Sequence_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="376,731" Id="ELK_ItemEnd_1" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+  <Sequence sap2010:Annotation.AnnotationText="This workflow is used to log specific information at the end of the treatment of a queueItem. Those information are used to create dashboards in Kibana.&#xA;&#xA;In_Arguments :&#xA; - In_ProcessID : The numer of the process for the specify department or client (ex : 001)&#xA; - In_Department : The name of the client of the process&#xA; - In_BusinessUnit : The business unit of the process (ex : Finance or IT, etc..)&#xA; - In_Team : The name of the business team of the process (ex : Ile de france, etc.. )&#xA; - In_HumanTime : The time used by a human to process this queueItem&#xA; - In_ItemStatus : The status of the current queueItem (BUSINESS_EXCEPTION, APP_EXCEPTION, etc..)&#xA; - In_ItemProcessed : An unique ID for the current queuItem to identify it&#xA; - In_StartTime : The starting date of the current Item created at the invoke of ELK_ItemStart" DisplayName="ELK_ItemEnd" sap2010:WorkflowViewState.IdRef="Sequence_1" sads:DebugSymbol.Symbol="d1VDOlxVc2Vyc1xwY2VzbWF0XERvY3VtZW50c1xVaVBhdGhcQm9pbGVycGxhdGUgRGVsb2l0dGVcRnJhbWV3b3JrXEVMS1xFTEtfSXRlbUVuZC54YW1sFVEDbg4CAQFSBV0XAgEPXgVe1gECAQtfBWwaAgECWD1YRgIBHVZEVlMCARtZRllYAgEZWkFaTwIBF1RDVFICARVXRVdWAgETW0RbgQECARJVQlVQAgEQXnJe0wECAQxpMmk+AgEKaDJoOwIBCWIyYjwCAQhjMmM7AgEHZDJkPAIBBmUyZT4CAQVmMmY2AgEEZzJnPwIBAw==">
+    <ui:AddLogFields DisplayName="Add Log Fields" sap2010:WorkflowViewState.IdRef="AddLogFields_3">
+      <ui:AddLogFields.Fields>
+        <InArgument x:TypeArguments="x:String" x:Key="itemStatus">[in_ItemStatus]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="processID">[In_ProcessID]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="departement">[In_Department]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="businessUnit">[in_Businessunit]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="team">[in_Team]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="itemProcessed">[In_ItemProcessed]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="humanTime">[In_HumanTime]</InArgument>
+        <InArgument x:TypeArguments="x:Int64" x:Key="itemDuration">[Convert.ToInt64((DateTime.Now - In_StartTime).TotalSeconds)]</InArgument>
+      </ui:AddLogFields.Fields>
+    </ui:AddLogFields>
+    <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;ELK_ItemEnd | Item : &quot; + In_ItemProcessed + &quot; Status : &quot; + In_ItemStatus]" />
+    <ui:RemoveLogFields DisplayName="Remove Log Fields" sap2010:WorkflowViewState.IdRef="RemoveLogFields_1">
+      <ui:RemoveLogFields.Fields>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="16">
+          <InArgument x:TypeArguments="x:String">itemStatus</InArgument>
+          <InArgument x:TypeArguments="x:String">processID</InArgument>
+          <InArgument x:TypeArguments="x:String">department</InArgument>
+          <InArgument x:TypeArguments="x:String">businessUnit</InArgument>
+          <InArgument x:TypeArguments="x:String">team</InArgument>
+          <InArgument x:TypeArguments="x:String">itemProcessed</InArgument>
+          <InArgument x:TypeArguments="x:String">humanTime</InArgument>
+          <InArgument x:TypeArguments="x:String">itemDuration</InArgument>
+        </scg:List>
+      </ui:RemoveLogFields.Fields>
+    </ui:RemoveLogFields>
+  </Sequence>
+</Activity>
